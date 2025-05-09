@@ -19,7 +19,9 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
       - name: Get list of wallpapers
-        run: ls wallpapers/ > wallpaper-preview.md
+        run: |
+          ls wallpapers/16-9 > wallpaper-preview.md
+          ls wallpapers/16-10 >> wallpaper-preview.md
         
       - name: Add markdown syntax for image preview on each line
         run: |
